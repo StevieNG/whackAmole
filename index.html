@@ -7,31 +7,72 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>Whack-Mr-Bump! <span class="score">0</span></h1>
-  <button onClick="startGame()">Start!</button>
-
+<div class="header">
+  <h1 id="title">Whack-Mr-Bump! <br><span class="score">0</span></h1>
+  
+  <button id="startGame">Start!</button>
+  <!-- <button id="next">Next</button> -->
+</div>
+  <div class="divider">
   <div class="game">
     <div class="field field1">
-      <div class="mrbump"></div>
+      <div class="mrbump">
+          <img class ="fieldPic" src="field.png" alt="pic">
+          <img onclick="hit()" class = "bumpPic" id="bump1"src="mrbump.png" alt="pic">
+       
+        
+
+      </div>
     </div>
     <div class="field field2">
       <div class="mrbump"></div>
+      <img class ="fieldPic" src="field.png" alt="pic">
+      <img onclick="hit()" class = "bumpPic" id="bump2"src="mrbump.png" alt="pic">
+     
+
+    
     </div>
     <div class="field field3">
       <div class="mrbump"></div>
+      
+      <img class ="fieldPic" src="field.png" alt="pic">
+      <img onclick="hit()" class = "bumpPic" id="bump3"src="mrbump.png" alt="pic">
+   
+
     </div>
     <div class="field field4">
       <div class="mrbump"></div>
+     
+      <img class ="fieldPic" src="field.png" alt="pic">
+      <img onclick="hit()" class = "bumpPicBottom" id="bump4" src="mrbump.png" alt="pic">
     </div>
     <div class="field field5">
       <div class="mrbump"></div>
+      
+      <img class ="fieldPic" src="field.png" alt="pic">
+      <img onclick="hit()" class = "bumpPicBottom" id="bump5"src="mrbump.png" alt="pic">
     </div>
     <div class="field field6">
       <div class="mrbump"></div>
+
+      <img class ="fieldPic" src="field.png" alt="pic">
+      <img onclick="hit()" class = "bumpPicBottom" id="bump6"src="mrbump.png" alt="pic">
     </div>
   </div>
+
+  <div class ="scoreBoard">   
+      <h2> Top 5 Score</h2>
+        <div> First Place------------------- <span id="firstPlace"></span> points by <span id="firstPlaceName"></span></div><br>
+        <div> Second Place---------------- <span id="secondPlace"></span> points by <span id="secondPlaceName"></span></div><br>
+        <div> Third Place------------------ <span id="thirdPlace"></span> points by <span id="thirdPlaceName"></span></div><br>
+        <div> 4th: --------------------------- <span id="forthPlace"></span> points by <span id="forthPlaceName"></span></div><br>
+        <div> 5th: --------------------------- <span id="fifthPlace"></span> points by <span id="fifthPlaceName"></span></div><br>
+        
+  </div>
+
+</div>
 <script src="app.js"></script>
+
 
 </body>
 </html>

@@ -1,1 +1,117 @@
+body{
+    box-sizing: border-box;
+    background-color: cyan;
+    /* text-align: center; */
+}
+.game{
+    /* margin-left: 10%; */
+    margin-top: 10%;
+    height:400px;
+    width:80%;
+    /* background-color: gray; */
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
 
+.divider{
+
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    
+}
+.scoreBoard{
+width: 19%;
+border: 5px dashed rgb(248, 68, 68);
+
+color: rgb(27, 102, 168);
+
+}
+
+.scoreBoard h2{
+    text-align: center;
+}
+
+
+
+
+.header{
+    text-align: center;
+}
+
+#startGame{
+    height: 30px;
+    width: 30%;
+
+
+}
+.field{
+    height:200px;
+    width:33.33333%;
+    align-content:flex-end;
+}
+
+.field1 .field2 .field3 .field4 .field5 .field6{
+    background-color: white;
+}
+.fieldPic {
+    
+    position: absolute;
+    
+    padding-top: 150px;
+    padding-bottom: 0;
+    height:50px;
+    width:300px;
+}
+
+.bumpPic{
+    position: absolute;
+    padding-left: 70px;
+    padding-top: 80px;
+    height: 150px;
+    width: 150px;
+    display: none; 
+    animation: appear 1s  ease-out both, rotate  1s  linear;
+
+
+}
+
+.bumpPicBottom{
+    position: absolute;
+    padding-left: 70px;
+    padding-top: 80px;
+    height: 150px;
+    width: 150px;
+    display: none; 
+    animation: appear2  1s  ease-out both, rotate  1s  linear;
+
+}
+img:active{
+    transform: scale3d(0.8)
+    
+}
+
+@keyframes appear{ 
+    /* from{ transform: translateY(-100px;)  }
+    to { transform: translateY(100px;)} */
+
+     from {top:350px;}
+    to {top: 250px;}
+
+}
+
+@keyframes appear2{ 
+    /* from{ transform: translateY(-100px;)  }
+    to { transform: translateY(100px;)} */
+
+     from {top:550px;}
+    to {top: 450px;}
+
+}
+
+@keyframes rotate {
+    from { transform: rotateX(90deg)}
+    to {transform: rotateX(0deg)}
+
+}
