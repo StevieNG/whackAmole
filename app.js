@@ -21,11 +21,14 @@ var thirdPlaceName = document.getElementById("thirdPlaceName")
 var forthPlaceName = document.getElementById("forthPlaceName")
 var fifthPlaceName = document.getElementById("fifthPlaceName")
 var highScoreName =["Ali","Ben","Charlie","Dan","Ed"];
+var submit = document.getElementById("submit");
+var nameField = document.getElementById("nameField");
+ 
 
-var playerName =prompt("Enter Player's name", " ")
 highScore.sort();
 updateScore();
 updateName();
+startGamebtn.style.display="none";
 
 console.log(highScore)
 
@@ -34,6 +37,16 @@ Array.prototype.insert = function ( index, item ) {
 };
 
 var totalScore =0;
+
+submit.addEventListener('click',()=>{
+
+    playerName = document.getElementById("input").value;
+console.log(playerName);
+startGamebtn.style.display="inline";
+
+
+
+})
 
 function allDisapper() {
     bumpPic[0].style.display="none";
@@ -93,6 +106,11 @@ function mainGame(){
 
 }
 startGamebtn.addEventListener('click',()=>{
+    // var playerName =prompt("Enter Player's name", " ")
+    nameField.style.display="none";
+    startGamebtn.style.display="none";
+
+
     clearScore();
     setTimeout(() => {
         
@@ -104,6 +122,8 @@ startGamebtn.addEventListener('click',()=>{
         window.alert(`game over, you scored ${totalScore} points \n 1st Place ${highScore[4]}  
         \n 2nd Place ${highScore[3]}  
         \n 3rd Place ${highScore[2]}        `)
+        nameField.style.display="inline";
+        
         console.log(highScore);
     }, 10000); 
 
@@ -136,7 +156,7 @@ function checkHighScore(){
             highScore.push(totalScore);
             highScore.shift();
             highScoreName.push(playerName);
-            highScore.shift();
+            highScoreName.shift();
             window.alert("New high Score!!!")
 
         }
@@ -145,7 +165,7 @@ function checkHighScore(){
             highScore.push(totalScore);
             highScore.shift();
             highScoreName.push(playerName);
-            highScore.shift();
+            highScoreName.shift();
             window.alert("Shared high Score!!!")
 
         }
